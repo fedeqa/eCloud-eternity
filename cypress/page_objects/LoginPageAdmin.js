@@ -61,7 +61,7 @@ class LoginPageAdmin {
     cy.passwordInput().click().type("12345678");
     cy.iniciarSesionButton().click();
     cy.url("include", "/dashboard/super_admin");
-    cy.welcomeToaster().should("be.visible");
+    cy.welcomeToaster().wait(3000).should("be.visible");
     cy.wait(3000);
   }
 
