@@ -576,6 +576,11 @@ class ModulesAdmin {
       .as("guardarTrackButton")
       .click();
   }
+  fechasIncompatibles() {
+    cy.get(".swal2-popup").should("be.visible");
+    cy.get(".swal2-confirm").click();
+    cy.wait(3000);
+  }
 
   changeStatus() {
     cy.get(

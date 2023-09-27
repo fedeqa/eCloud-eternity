@@ -42,6 +42,9 @@ describe("Login y cookies", () => {
     modulesPageAdmin.addTracks();
     cy.wait(8000);
 
+    //  - Pop Up si las fechas de tracks son incompatibles -
+    modulesPageAdmin.fechasIncompatibles();
+
     //  - Cambiar Status -
     modulesPageAdmin.changeStatus();
 
